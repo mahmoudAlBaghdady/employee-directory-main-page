@@ -8,40 +8,41 @@ const Footer = () => {
                 <div className="container text-center text-md-start mt-5">
                     <div className="row mt-3">
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4"><img src="/img/logo2.webp" alt="Logo" width="50" height="44" className="d-inline-block me-1 mb-1"/>Employee Direct</h6>
-                            <p>If you have other concerns that we weren't able to address, please reach out to us at support@gmail.com or go to our support page.</p>
+                            <h6 className="text-uppercase fw-bold mb-4"><img src="/img/logo2.webp" alt="Logo" width="50" height="44" className="d-inline-block me-1 mb-1"/>Employee Directory</h6>
+                            <p>For assistance or inquiries about our directory management platform, please contact us at support@employeedirect.com or visit our support page.</p>
                         </div>
 
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-                            <p><a href="#!" className="text-reset text-decoration-none">Product 1</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">Product 2</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">Product 3</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">Product 4</a></p>
+                            <h6 className="text-uppercase fw-bold mb-4">Features</h6>
+                            <p><a href="#!" className="text-reset text-decoration-none">Employee Profiles</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Search & Filter</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Organizational Charts</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Contact Management</a></p>
                         </div>
                 
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                            <p><a href="#!" className="text-reset text-decoration-none">link 1</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">link 2</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">link 3</a></p>
-                            <p><a href="#!" className="text-reset text-decoration-none">link 4</a></p>
+                            <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
+                            <p><a href="#!" className="text-reset text-decoration-none">FAQ</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Support Center</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Contact Us</a></p>
+                            <p><a href="#!" className="text-reset text-decoration-none">Privacy Policy</a></p>
                         </div>
                 
                         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+                            <h6 className="text-uppercase fw-bold mb-4">Contact Us</h6>
                             <p><i className="fas fa-phone me-3"></i> + 961 78 87 16 49</p>
-                            <p><i className="fas fa-print me-3"></i> + 961 03 78 76 66</p>
+                            <p><i className="fas fa-envelope me-3"></i> support@employeedirect.com</p>
                         </div>
                     </div>
                     <div className="col-12 pt-5 pb-2 text-center">
-                        <p>© 2024 Copyright</p>
+                        <p>© 2024 Copyright Employee Directory</p>
                         <hr/>
-                        <p className="fs-6">Welcome to Employee Directory website! Before you start browsing our site, please note that we use cookies to ensure the proper operation of our services, personalize content, deliver ads, provide social media features, boost performance and analyze our traffic. By continuing to browse our site, you consent to the collection, use, and storage of cookies on your device for us and our partners. You can revoke your consent at any time in your device browsing settings. Check our Privacy Policy (§6) to learn more about the cookies we use.</p>
+                        <p className="fs-6">Welcome to Employee Directory! We use cookies for site functionality, analytics, and to improve your experience. By continuing, you consent to our cookie policy. You can manage cookie settings anytime. For more details, check our Privacy Policy.</p>
                     </div>
                 </div>
             </section>
         </footer>
+
     </>
   )
 }

@@ -27,18 +27,18 @@ const Navbar = () => {
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li className="nav-item mx-1">
-                            <a className="nav-link" href="#">Price</a>
+                            <a className="nav-link disabled" aria-disabled="true" href="#" >Price</a>
                         </li>
                         <li className="nav-item mx-1">
-                            <a className="nav-link" href="#">Features</a>
+                            <a className="nav-link disabled" aria-disabled="true" href="#">Features</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About Us</a>
+                            <a className="nav-link disabled" aria-disabled="true" href="#">About Us</a>
                         </li>
                     </ul>
                 </div>
                 <div className="col-xxl-2 col-xl-3 col-lg-3 col-12 mx-auto my-auto">
-                    <a className="primary-button btn px-3 py-2" href="/login">Dashboard</a>
+                    <a className="primary-button btn px-3 py-2" href='https://dashboard.employeedirectory.site' rel="noreferrer" target='_blank'>Dashboard</a>
                 </div>
                 </div>
             </div>
