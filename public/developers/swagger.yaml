@@ -1,0 +1,708 @@
+openapi: 3.0.2
+info:
+  title: Employee Directory API
+  version: 1.0.0
+  description: |
+    Welcome to the Employee Directory API documentation!
+
+paths:
+  /departments:
+    get:
+      tags:
+        - Departments
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: ID of the department
+                      example: 66147bfb005f54e4a05e7250
+                    name:
+                      type: string
+                      description: Name of the department
+                      example: Engineering Department
+                    createdAt:
+                      type: date
+                      description: Created at datetime
+                      example: 2024-04-08T23:21:29.722Z
+                    updatedAt:
+                      type: date
+                      description: Updated at datetime
+                      example: 2024-04-09T01:18:32.154Z
+    post:
+      tags:
+        - Departments
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the department
+                  example: Engineering Department
+              required:
+                - name
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the department
+                    example: 66147bfb005f54e4a05e7250
+                  name:
+                    type: string
+                    description: Name of the department
+                    example: Engineering Department
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+  /departments/{departmentId}:
+    get:
+      tags:
+        - Departments
+      parameters:
+      - name: "departmentId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the department
+                    example: 66147bfb005f54e4a05e7250
+                  name:
+                    type: string
+                    description: Name of the department
+                    example: Engineering Department
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    patch:
+      tags:
+        - Departments
+      parameters:
+      - name: "departmentId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: IT Department
+              required:
+                - name
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the department
+                    example: 66147bfb005f54e4a05e7250
+                  name:
+                    type: string
+                    description: Name of the department
+                    example: IT Department
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    delete:
+      tags:
+        - Departments
+      parameters:
+      - name: "departmentId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+
+  /locations:
+    get:
+      tags:
+        - Locations
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: ID of the location
+                      example: 66149d271978622aed207bf4
+                    name:
+                      type: string
+                      description: Name of the location
+                      example: Beirut
+                    createdAt:
+                      type: date
+                      description: Created at datetime
+                      example: 2024-04-08T23:21:29.722Z
+                    updatedAt:
+                      type: date
+                      description: Updated at datetime
+                      example: 2024-04-09T01:18:32.154Z
+    post:
+      tags:
+        - Locations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the locations
+                  example: Beirut
+              required:
+                - name
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the location
+                    example: 66149d271978622aed207bf4
+                  name:
+                    type: string
+                    description: Name of the location
+                    example: Beirut
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+  /locations/{locationId}:
+    get:
+      tags:
+        - Locations
+      parameters:
+      - name: "locationId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the location
+                    example: 66149d271978622aed207bf4
+                  name:
+                    type: string
+                    description: Name of the location
+                    example: Beirut
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    patch:
+      tags:
+        - Locations
+      parameters:
+      - name: "locationId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Jbeil
+              required:
+                - name
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the location
+                    example: 66149d271978622aed207bf4
+                  name:
+                    type: string
+                    description: Name of the location
+                    example: Jbeil
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    delete:
+      tags:
+        - Locations
+      parameters:
+      - name: "locationId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+
+
+
+  /employees:
+    get:
+      tags:
+        - Employees
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: string
+            example: 1
+        - in: query
+          name: limit
+          schema:
+            type: string
+            example: 10
+        - in: query
+          name: search
+          schema:
+            type: string
+            example: "Mahmoud"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    employees:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                            description: ID of the employee
+                            example: 66147c34005f54e4a05e7257
+                          name:
+                            type: string
+                            description: Name of the employee
+                            example: Mahmoud Al Baghdady
+                          email:
+                            type: string
+                            description: Email of the employee
+                            example: mahmoudalbaghdadyy@gmail.com
+                          jobTitle:
+                            type: string
+                            description: Job title of the employee
+                            example: Software Developer
+                          pictureUrl:
+                            type: string
+                            description: Picture of the employee
+                            example: https://example.com
+                          departmentId:
+                            type: string
+                            description: Department ID of the employee
+                            example: 66147bfb005f54e4a05e7250
+                          locationId:
+                            type: string
+                            description: location ID of the employee
+                            example: 66147c05005f54e4a05e7251
+                          department:
+                            type: object
+                            properties:
+                              name:
+                                type: string                                
+                                description: Department Name of the employee
+                                example: Engineering Department
+                          location:
+                            type: object
+                            properties:
+                              name:
+                                type: string                                
+                                description: Location Name of the employee
+                                example: Beirut
+                          isFavorite:
+                            type: boolean
+                            description: Status of the employee
+                            example: true
+                          createdAt:
+                            type: date
+                            description: Created at datetime
+                            example: 2024-04-08T23:21:29.722Z
+                          updatedAt:
+                            type: date
+                            description: Updated at datetime
+                            example: 2024-04-09T01:18:32.154Z
+    post:
+      tags:
+        - Employees
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the employee
+                  example: Mahmoud Al Baghdady
+                email:
+                  type: string
+                  description: Email of the employee
+                  example: mahmoudalbaghdadyy@gmail.com
+                jobTitle:
+                  type: string
+                  description: Job title of the employee
+                  example: Software Developer
+                pictureUrl:
+                  type: string
+                  description: Picture of the employee
+                  example: https://example.com
+                departmentId:
+                  type: string
+                  description: Department ID of the employee
+                  example: 66147bfb005f54e4a05e7250
+                locationId:
+                  type: string
+                  description: location ID of the employee
+                  example: 66147c05005f54e4a05e7251
+                isFavorite:
+                  type: boolean
+                  description: Status of the employee
+                  example: true
+              required:
+                - name
+                - email
+                - jobTitle
+                - pictureUrl
+                - departmentId
+                - locationId
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the employee
+                    example: 66147c34005f54e4a05e7257
+                  name:
+                    type: string
+                    description: Name of the employee
+                    example: Mahmoud Al Baghdady
+                  email:
+                    type: string
+                    description: Email of the employee
+                    example: mahmoudalbaghdadyy@gmail.com
+                  jobTitle:
+                    type: string
+                    description: Job title of the employee
+                    example: Software Developer
+                  pictureUrl:
+                    type: string
+                    description: Picture of the employee
+                    example: https://example.com
+                  departmentId:
+                    type: string
+                    description: Department ID of the employee
+                    example: 66147bfb005f54e4a05e7250
+                  locationId:
+                    type: string
+                    description: location ID of the employee
+                    example: 66147c05005f54e4a05e7251
+                  isFavorite:
+                    type: boolean
+                    description: Status of the employee
+                    example: true
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+
+  /employees/{employeeId}:
+    get:
+      tags:
+        - Employees
+      parameters:
+      - name: "employeeId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the employee
+                    example: 66147c34005f54e4a05e7257
+                  name:
+                    type: string
+                    description: Name of the employee
+                    example: Mahmoud Al Baghdady
+                  email:
+                    type: string
+                    description: Email of the employee
+                    example: mahmoudalbaghdadyy@gmail.com
+                  jobTitle:
+                    type: string
+                    description: Job title of the employee
+                    example: Software Developer
+                  pictureUrl:
+                    type: string
+                    description: Picture of the employee
+                    example: https://example.com
+                  departmentId:
+                    type: string
+                    description: Department ID of the employee
+                    example: 66147bfb005f54e4a05e7250
+                  locationId:
+                    type: string
+                    description: location ID of the employee
+                    example: 66147c05005f54e4a05e7251
+                  department:
+                    type: object
+                    properties:
+                      name:
+                        type: string                                
+                        description: Department Name of the employee
+                        example: Engineering Department
+                  location:
+                    type: object
+                    properties:
+                      name:
+                        type: string                                
+                        description: Location Name of the employee
+                        example: Beirut
+                  isFavorite:
+                    type: boolean
+                    description: Status of the employee
+                    example: true
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    patch:
+      tags:
+        - Employees
+      parameters:
+      - name: "employeeId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Name of the employee
+                  example: Mahmoud Al Baghdady
+                email:
+                  type: string
+                  description: Email of the employee
+                  example: mahmoudalbaghdadyy@gmail.com
+                jobTitle:
+                  type: string
+                  description: Job title of the employee
+                  example: Software Developer
+                pictureUrl:
+                  type: string
+                  description: Picture of the employee
+                  example: https://example.com
+                departmentId:
+                  type: string
+                  description: Department ID of the employee
+                  example: 66147bfb005f54e4a05e7250
+                locationId:
+                  type: string
+                  description: location ID of the employee
+                  example: 66147c05005f54e4a05e7251
+                isFavorite:
+                  type: boolean
+                  description: Status of the employee
+                  example: true
+              required:
+                - name
+                - email
+                - jobTitle
+                - pictureUrl
+                - departmentId
+                - locationId
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the employee
+                    example: 66147c34005f54e4a05e7257
+                  name:
+                    type: string
+                    description: Name of the employee
+                    example: Mahmoud Al Baghdady
+                  email:
+                    type: string
+                    description: Email of the employee
+                    example: mahmoudalbaghdadyy@gmail.com
+                  jobTitle:
+                    type: string
+                    description: Job title of the employee
+                    example: Software Developer
+                  pictureUrl:
+                    type: string
+                    description: Picture of the employee
+                    example: https://example.com
+                  departmentId:
+                    type: string
+                    description: Department ID of the employee
+                    example: 66147bfb005f54e4a05e7250
+                  locationId:
+                    type: string
+                    description: location ID of the employee
+                    example: 66147c05005f54e4a05e7251
+                  isFavorite:
+                    type: boolean
+                    description: Status of the employee
+                    example: true
+                  createdAt:
+                    type: date
+                    description: Created at datetime
+                    example: 2024-04-08T23:21:29.722Z
+                  updatedAt:
+                    type: date
+                    description: Updated at datetime
+                    example: 2024-04-09T01:18:32.154Z
+    delete:
+      tags:
+        - Employees
+      parameters:
+      - name: "employeeId"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+tags:
+  - name: Departments
+    description: Provides different operations to the departments entity like List, Get, Create, Update, Delete.
+
+  - name: Locations
+    description: Provides different operations to the location entity like List, Get, Create, Update, Delete.
+
+  - name: Employees
+    description: Provides different operations to the employee entity like List, Get, Create, Update, Delete.
+
+x-tagGroups:
+  - name: API Endpoints
+    tags:
+      - Departments
+      - Locations
+      - Employees
