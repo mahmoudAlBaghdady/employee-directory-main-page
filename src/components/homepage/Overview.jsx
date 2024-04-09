@@ -30,7 +30,7 @@ const Overview = () => {
                         <p className="fs-5 fw-bold d-inline-block">Search & Filter Capabilities</p>
                     </div>
                     <div className="col-lg-12 col-md-5 col-12 my-3">
-                        <a className="secondary-button btn px-5 py-2 d-none d-lg-inline-block" href='https://dashboard.employeedirectory.site' rel="noreferrer" target='_blank'>See More</a>
+                        <a className="secondary-button btn px-5 py-2 d-none d-lg-inline-block" href='http://employee-directory-dashboard.s3-website.eu-central-1.amazonaws.com/' rel="noreferrer" target='_blank'>See More</a>
                     </div>
                 </div>
             </div>

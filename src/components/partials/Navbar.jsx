@@ -38,7 +38,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="col-xxl-2 col-xl-3 col-lg-3 col-12 mx-auto my-auto">
-                    <a className="primary-button btn px-3 py-2" href='https://dashboard.employeedirectory.site' rel="noreferrer" target='_blank'>Dashboard</a>
+                    <a className="primary-button btn px-3 py-2" href='http://employee-directory-dashboard.s3-website.eu-central-1.amazonaws.com/' rel="noreferrer" target='_blank'>Dashboard</a>
                 </div>
                 </div>
             </div>
